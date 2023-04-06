@@ -13,10 +13,8 @@ namespace PayrollSystem.Models
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
-        public string FullName
-        {
-            get { return FirstName + (string.IsNullOrEmpty(MiddleName) ? " " : (" " + (char?)MiddleName[0] + ".").ToUpper()) + " " + LastName; }
-        }
+        public string FullName { get; set; }
+       
         public string Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime DateJoined { get; set; } = DateTime.UtcNow;

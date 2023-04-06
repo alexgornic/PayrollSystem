@@ -11,7 +11,7 @@ namespace PayrollSystem.Models
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
-        public string FullName
+        public string FullName 
         {
             get { return FirstName + (string.IsNullOrEmpty(MiddleName) ? " " : (" " + (char?)MiddleName[0] + ".").ToUpper()) + " " + LastName; }
         }
