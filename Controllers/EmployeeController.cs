@@ -18,7 +18,7 @@ namespace PayrollSystem.Controllers
         public IActionResult Index()
         {
             var employees = _employeeService.GetAll();
-            employees.Select(e => new EmployeeIndexViewModel()
+            var models =  employees.Select(e => new EmployeeIndexViewModel()
             {
                 Id= e.Id,
                 EmployeeNo = e.EmployeeNo,
@@ -28,7 +28,7 @@ namespace PayrollSystem.Controllers
                 Gender=e.Gender,
                 City =e.City,
             }).ToList();
-            return View(employees);
+            return View(models);
         }
 
         //Create employee
